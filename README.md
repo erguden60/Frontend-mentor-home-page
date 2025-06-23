@@ -10,6 +10,7 @@ Bu proje, Frontend Mentor tarafından sağlanan “News Homepage” tasarımın�
 
 
 🚀 Teknolojiler
+
 Next.js (App Router yapısı)
 
 React
