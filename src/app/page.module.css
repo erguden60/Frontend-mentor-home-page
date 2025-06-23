@@ -1,0 +1,35 @@
+/* src/app/page.module.css */
+
+.homeGrid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 3rem 2rem;
+}
+
+.heroArea {
+  grid-column: 1 / 2;
+}
+
+.sidebarArea {
+  grid-column: 2 / 3;
+}
+
+.topArticlesArea {
+  grid-column: 1 / -1;
+}
+
+/* --- RESPONSIVE KISMI --- */
+@media (max-width: 992px) {
+  .homeGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem; /* Sadece dikey boşluk yeterli */
+  }
+
+  .heroArea,
+  .sidebarArea,
+  .topArticlesArea {
+    grid-column: 1 / -1;
+  }
+}

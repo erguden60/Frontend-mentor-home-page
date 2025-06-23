@@ -1,0 +1,61 @@
+/* src/components/TopArticles/TopArticles.module.css */
+
+.topArticlesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.articleCard {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.imageWrapper img {
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: 700;
+  /* RENGİ BURADA DEĞİŞTİRDİK */
+  color: var(--clr-primary-red);
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--clr-neutral-very-dark-blue);
+  margin: 0.75rem 0;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--clr-primary-red);
+}
+
+.description {
+  color: var(--clr-neutral-dark-grayish-blue);
+  line-height: 1.6;
+}
+
+/* --- RESPONSIVE KISMI --- */
+@media (max-width: 992px) {
+  .topArticlesContainer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+}

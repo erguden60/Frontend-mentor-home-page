@@ -1,0 +1,148 @@
+/* src/components/Header/Header.module.css */
+
+/* --- MEVCUT STİLLERİN --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo a {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--clr-neutral-very-dark-blue);
+  text-decoration: none;
+}
+
+.navDesktop ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.navDesktop a {
+  text-decoration: none;
+  color: var(--clr-neutral-dark-grayish-blue);
+  transition: color 0.2s ease-in-out;
+}
+
+.navDesktop a:hover {
+  color: var(--clr-primary-red);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--clr-neutral-very-dark-blue);
+  transition: all 0.3s ease-in-out; /* Animasyon için */
+}
+
+/* --- YENİ EKLENEN STİLLER --- */
+
+/* Mobil Navigasyon Konteyneri ve Overlay */
+.navMobileContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 1000;
+}
+.navMobileContainer.active {
+  visibility: visible;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Siyah, yarı saydam arka plan */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navMobileContainer.active .overlay {
+  opacity: 1;
+}
+
+/* Açılan Menünün Kendisi */
+.navMobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 70%;
+  max-width: 280px;
+  background-color: var(--clr-neutral-off-white);
+  padding: 1.5rem;
+  padding-top: 8rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navMobileContainer.active .navMobile {
+  transform: translateX(0);
+}
+
+.closeIcon {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  cursor: pointer;
+  display: none; /* Sadece mobil için */
+}
+
+.navMobile ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navMobile a {
+  font-size: 1.25rem;
+  color: var(--clr-neutral-very-dark-blue);
+  font-weight: 500;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- RESPONSIVE KISMI --- */
+@media (max-width: 768px) {
+  .navDesktop {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .closeIcon {
+    display: block; /* Sadece mobilde close ikonunu göster */
+  }
+  .header {
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+}

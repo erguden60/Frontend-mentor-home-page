@@ -1,0 +1,71 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heroImageContainer {
+  width: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--clr-neutral-very-dark-blue);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--clr-neutral-dark-grayish-blue);
+  margin-bottom: 2rem;
+}
+
+.readMoreButton {
+  /* DEĞİŞİKLİK 1: Burayı SİYAH yapıyoruz */
+  background-color: var(--clr-neutral-very-dark-blue);
+  color: var(--clr-neutral-off-white);
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.readMoreButton:hover {
+  /* DEĞİŞİKLİK 2: Burayı KIRMIZI yapıyoruz */
+  background-color: var(--clr-primary-red);
+}
+
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 2.8rem;
+  }
+}
