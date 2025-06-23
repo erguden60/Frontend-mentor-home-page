@@ -30,10 +30,9 @@ Orijinal tasarıma sadık frontend geliştirme
 🔧 Kurulum
 Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 
-bash
-Kopyala
-Düzenle
-git clone https://github.com/kullanici-adin/news-homepage-clone.git
+
+
+
 cd news-homepage-clone
 npm install
 npm run dev
