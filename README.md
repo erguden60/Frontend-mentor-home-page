@@ -1,5 +1,5 @@
 📰 News Homepage Clone
-Bu proje, Frontend Mentor tarafından sağlanan “News Homepage” tasarımının birebir klonudur. Proje, Next.js kullanılarak geliştirilmiştir. 
+Bu proje, Frontend Mentor tarafından sağlanan “News Homepage” tasarımının birebir klonudur.  https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl Proje,  Next.js kullanılarak geliştirilmiştir. 
 
 ![news-home-page](https://github.com/user-attachments/assets/a88ef501-fb6e-4266-8a5f-fa2f1070a58d)
 
