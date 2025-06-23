@@ -31,8 +31,8 @@ Orijinal tasarıma sadık frontend geliştirme
 Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 
 
-
-
 cd news-homepage-clone
 npm install
-npm run dev
+npm run de
+
+🔗 Canlı Demo: Projeyi Görüntüle: https://frontend-mentor-home-page.vercel.app/
